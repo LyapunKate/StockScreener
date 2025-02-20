@@ -1,9 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stock Screener App
+
+A powerful web application that allows users to screen and analyze stocks based on various financial metrics. Built with Next.js and powered by Alpha Vantage API.
+
+## Features
+
+- **Stock Screening**: Filter stocks by multiple parameters:
+  - P/E Ratio
+  - P/B Ratio
+  - Return on Equity (ROE)
+  - EPS Growth
+  - Debt/Equity Ratio
+  - Free Cash Flow
+  - Dividend Yield
+  - Industry
+
+- **Market Overview**: View real-time market data including:
+  - Top Gainers
+  - Top Losers
+  - Most Actively Traded Stocks
+
+- **Stock Details**: For each stock, view:
+  - Detailed financial metrics
+  - Monthly price chart
+  - Industry average comparisons
+
+## Prerequisites
+
+- Node.js 18.17 or later
+- npm (comes with Node.js) or other package managers (yarn, pnpm, bun)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
 
+3. Set up your environment variables in `.env.local`:
+```env
+NEXT_PUBLIC_ALPHA_VANTAGE_API_KEY=your_api_key_here
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
@@ -16,21 +57,42 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Runtime**: [Node.js](https://nodejs.org/) - JavaScript runtime
+- **Framework**: [Next.js](https://nextjs.org) - React framework
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Charts**: Recharts
+- **Database**: Supabase
+- **API**: Alpha Vantage
+- **Type Safety**: TypeScript
+
+## Project Structure
+
+```
+STOCK_SCREENER/
+├── app/                  # Next.js app directory
+│   ├── page.tsx         # Home page
+│   └── stock/           # Stock detail pages
+├── components/          # React components
+│   ├── stock-screener.tsx
+│   ├── filter-parameters.tsx
+│   ├── stock-table.tsx
+│   └── top-movers.tsx
+├── types/              # TypeScript type definitions
+└── lib/               # Utility functions
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Node.js Documentation](https://nodejs.org/docs) - Node.js runtime and APIs
+- [Next.js Documentation](https://nextjs.org/docs) - Next.js features and API
+- [Alpha Vantage API](https://www.alphavantage.co/documentation/) - Stock market data API
+- [Supabase Documentation](https://supabase.io/docs) - Open source Firebase alternative
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components
+- [Tailwind CSS](https://tailwindcss.com/docs) - Utility-first CSS framework
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
