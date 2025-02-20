@@ -24,6 +24,17 @@ A powerful web application that allows users to screen and analyze stocks based 
   - Monthly price chart
   - Industry average comparisons
 
+## Tech Stack
+
+- **Runtime**: [Node.js](https://nodejs.org/) - JavaScript runtime
+- **Framework**: [Next.js](https://nextjs.org) - React framework
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Charts**: Recharts
+- **Database**: Supabase
+- **API**: Alpha Vantage
+- **Type Safety**: TypeScript
+
 ## Prerequisites
 
 - Node.js 18.17 or later
@@ -57,32 +68,6 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Tech Stack
-
-- **Runtime**: [Node.js](https://nodejs.org/) - JavaScript runtime
-- **Framework**: [Next.js](https://nextjs.org) - React framework
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Charts**: Recharts
-- **Database**: Supabase
-- **API**: Alpha Vantage
-- **Type Safety**: TypeScript
-
-## Project Structure
-
-```
-STOCK_SCREENER/
-├── app/                  # Next.js app directory
-│   ├── page.tsx         # Home page
-│   └── stock/           # Stock detail pages
-├── components/          # React components
-│   ├── stock-screener.tsx
-│   ├── filter-parameters.tsx
-│   ├── stock-table.tsx
-│   └── top-movers.tsx
-├── types/              # TypeScript type definitions
-└── lib/               # Utility functions
-```
 
 ## Learn More
 
